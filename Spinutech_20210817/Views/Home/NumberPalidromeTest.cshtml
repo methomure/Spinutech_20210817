@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Palidrome Test";
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>Please enter a number (###) and click Submit.</p>
+
+@using (Html.BeginForm("NumberPalidromeTestSubmit", "Home", FormMethod.Post))
+{
+    @Html.TextBox("Number")
+    <input name="btnSubmit" id="btnSubmit" type="submit" class="btn btn-primary" value="Submit" />
+}
+
+<h3>@ViewBag.Message</h3>

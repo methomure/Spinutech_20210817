@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Number To Words";
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>Please enter a number (####.##) and click Submit.</p>
+
+@using (Html.BeginForm("ToWordsSubmit", "Home", FormMethod.Post))
+{
+    @Html.TextBox("Number", "", new { maxlength = 20 })
+    <input name="btnSubmit" id="btnSubmit" type="submit" class="btn btn-primary" value="Submit" />
+}
+
+<h3>@ViewBag.Message</h3>
+
